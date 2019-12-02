@@ -13,6 +13,9 @@ namespace CA2
     public class Activity : IComparable <Activity>
     {
         //properties
+
+
+
         public string Name { get; set; }
 
 
