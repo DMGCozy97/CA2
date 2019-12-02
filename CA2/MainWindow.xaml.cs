@@ -21,6 +21,7 @@ namespace CA2
     public partial class MainWindow : Window
     {
         List<Activity> allActivities = new List<Activity>();
+        List<Activity> selectedActivities = new List<Activity>();
 
         public MainWindow()
         {
@@ -53,6 +54,46 @@ namespace CA2
             allActivities.Add(ninthact);
 
             activityLbx.ItemsSource = allActivities;
+
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            //figure which item selected
+            Activity selectedActivity = activityLbx.SelectedItem as Activity;
+            //null check 
+            if (selectedActivity != null)
+            { ////move item from left to right
+                allActivities.Remove(selectedActivity);
+                selectedActivities.Add(selectedActivity);
+
+                //refresh screeen
+                activityLbx.ItemsSource = null;
+                activityLbx.ItemsSource = allActivities;
+
+                lbxCart.ItemsSource = null;
+                lbxCart.ItemsSource = selectedActivities;
+            }
+            
+        }
+
+        private void BtnRemove_Click(object sender, RoutedEventArgs e)
+        {
+             //figure which item selected
+             Activity selectedActivity = lbxCart.SelectedItem as Activity;
+            //null check 
+            if (selectedActivity != null)
+            { ////move item from left to right
+                allActivities.Remove(selectedActivity);
+                selectedActivities.Add(selectedActivity);
+
+                //refresh screeen
+                activityLbx.ItemsSource = null;
+                activityLbx.ItemsSource = allActivities;
+
+                lbxCart.ItemsSource = null;
+                lbxCart.ItemsSource = selectedActivities;
+            }
 
         }
     }
