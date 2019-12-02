@@ -13,53 +13,37 @@ namespace CA2
     public class Activity : IComparable <Activity>
     {
         //properties
-
-
-
         public string Name { get; set; }
 
+        public DateTime ActivityDate { get; set; }
 
-        private decimal _cost;
+        public decimal Cost { get; set; }
 
-        public decimal Cost
-        {
-            get { return _cost; }
-            set { _cost = value; }
-        }
+        public string Description { get; set; }
 
-
-        private string _description;
-
-        public string Description
-        {
-            get {
-                return Cost;
-            }
-            set { _description = value; }
-        }
-
+        public ActivityType TypeOfActivity { get; set; }
 
         
-        DateTime ActivityDate;
-        ActivityType TypeOfActivity;
-
-        public int CompareTo(Activity other)
-        {
-            throw new NotImplementedException();
-        }
-        
-        public Activity(string Name, decimal Cost, string Description, DateTime ActivityDate, ActivityType ack)
+        //CONSTRUCTORS
+        public Activity(string Name, decimal Cost, string Description, DateTime activityDate, ActivityType ack)
         {
             this.Name = Name;
             this.Cost = Cost;
             this.Description = Description;
-            this.ActivityDate = ActivityDate;
+            this.ActivityDate = activityDate;
             this.TypeOfActivity = ack;
         }
+
+
+        //METHODS
         public override string ToString()
         {
+            return string.Format(Name + " " + ActivityDate.ToShortDateString());
+        }
 
-            return string.Format(Name +""+ ActivityDate.ToShortDateString());
+        public int CompareTo(Activity other)
+        {
+            return this.ActivityDate.CompareTo(other.ActivityDate);
         }
     }
 }

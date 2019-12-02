@@ -35,10 +35,10 @@ namespace CA2
             Activity thirdact = new Activity("Treking",20m, "Instructor led group trek through local mountains.",new DateTime(2019, 06, 01), ActivityType.Land);
             Activity fourthact = new Activity("Mountain Biking",30m, "Instructor led half day mountain biking. All equipment provided.",new DateTime(2019, 06, 02), ActivityType.Land);
             Activity fifthact = new Activity("Abseiling",30m, "Experience the rush of adrenaline as you descend cliff faces from 10-500m.",new DateTime( 2019, 06, 03), ActivityType.Land);
-            Activity sixthact = new Activity("Surfing", 25m, "Surf", new DateTime(2019, 06, 02), ActivityType.Water));
-            Activity seventhact = new Activity("Parachuting", 100m, "Para", new DateTime(2019, 06, 01), ActivityType.Air);
-            Activity eigthact = new Activity("Hang Gliding", 80m, "Class", new DateTime (2019, 06,03 ), ActivityType.Air);
-            //Activity ninthact = new Activity("")
+            Activity sixthact = new Activity("Surfing", 25m, "2 hour surf lesson on the wild atlantic way", new DateTime(2019, 06, 02), ActivityType.Water);
+            Activity seventhact = new Activity("Parachuting", 100m, "Experience the thrill of free fall while you tandem jump from an airplane.", new DateTime(2019, 06, 01), ActivityType.Air);
+            Activity eigthact = new Activity("Hang Gliding", 80m, "Soar on hot air currents and enjoy spectacular views of the coastal region.", new DateTime (2019, 06,03 ), ActivityType.Air);
+            Activity ninthact = new Activity("Helicopter Tour", 200m, "Experience the ultimate in aerial sight-seeing as you tour the area in our modern helicopters", new DateTime(2019, 06, 03), ActivityType.Air);
 
 
             //add to list
@@ -48,6 +48,11 @@ namespace CA2
             allActivities.Add(fourthact);
             allActivities.Add(fifthact);
             allActivities.Add(sixthact);
+            allActivities.Add(seventhact);
+            allActivities.Add(eigthact);
+            allActivities.Add(ninthact);
+
+            activityLbx.ItemsSource = allActivities;
 
         }
     }

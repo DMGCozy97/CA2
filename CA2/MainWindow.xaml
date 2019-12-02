@@ -12,6 +12,9 @@
         <CheckBox x:Name="waterCheck" Content="Water" HorizontalAlignment="Left" Margin="22,160,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="airCheck" Content="Air" HorizontalAlignment="Left" Margin="22,195,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="activityLbx" HorizontalAlignment="Left" Height="210" Margin="127,94,0,0" VerticalAlignment="Top" Width="205" Loaded="ActivityLbx_Loaded"/>
+        <Button x:Name="btnAdd" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="372,145,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnRemove" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="372,195,0,0" VerticalAlignment="Top" Width="75"/>
+        <ListBox x:Name="lbxCart" HorizontalAlignment="Left" Height="210" Margin="514,94,0,0" VerticalAlignment="Top" Width="209"/>
 
     </Grid>
 </Window>
