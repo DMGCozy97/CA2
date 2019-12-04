@@ -22,6 +22,7 @@ namespace CA2
     {
         List<Activity> allActivities = new List<Activity>();
         List<Activity> selectedActivities = new List<Activity>();
+        List<Activity> filteredActivities = new List<Activity>();
 
         public MainWindow()
         {
@@ -68,11 +69,7 @@ namespace CA2
                 selectedActivities.Add(selectedActivity);
 
                 //refresh screeen
-                activityLbx.ItemsSource = null;
-                activityLbx.ItemsSource = allActivities;
-
-                lbxCart.ItemsSource = null;
-                lbxCart.ItemsSource = selectedActivities;
+                RefreshScreen();
             }
             
         }
@@ -84,17 +81,49 @@ namespace CA2
             //null check 
             if (selectedActivity != null)
             { ////move item from left to right
-                allActivities.Remove(selectedActivity);
-                selectedActivities.Add(selectedActivity);
+                allActivities.Add(selectedActivity);
+                selectedActivities.Remove(selectedActivity);
 
                 //refresh screeen
-                activityLbx.ItemsSource = null;
-                activityLbx.ItemsSource = allActivities;
-
-                lbxCart.ItemsSource = null;
-                lbxCart.ItemsSource = selectedActivities;
+                RefreshScreen();
             }
 
+        }
+
+        private void RefreshScreen()
+        {
+            activityLbx.ItemsSource = null;
+            activityLbx.ItemsSource = allActivities;
+
+            lbxCart.ItemsSource = null;
+            lbxCart.ItemsSource = selectedActivities;
+        }
+
+        private void rbAll_Checked(object sender, RoutedEventArgs e)
+        {
+            filteredActivities.Clear();
+
+            if (rbAll.IsChecked == true)
+            {
+                //show all activities
+                RefreshScreen();
+            }
+            else if(rbAir.IsChecked == true)
+            {
+                //show air activities
+                foreach(Activity activity in allActivities)
+                {
+                    if (activity.SuitableFor == Activity.Air)
+                }
+            }
+            else if(rbLand.IsChecked == true)
+            {
+                //show land activites
+            }
+            else if(rbWater.IsChecked == true)
+            {
+                //show water activities 
+            }
         }
     }
 }

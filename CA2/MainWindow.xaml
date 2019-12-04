@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <CheckBox x:Name="allCheck" Content="All" HorizontalAlignment="Left" Margin="22,94,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="landCheck" Content="Land" HorizontalAlignment="Left" Margin="22,128,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="waterCheck" Content="Water" HorizontalAlignment="Left" Margin="22,160,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="airCheck" Content="Air" HorizontalAlignment="Left" Margin="22,195,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="activityLbx" HorizontalAlignment="Left" Height="210" Margin="127,94,0,0" VerticalAlignment="Top" Width="205" Loaded="ActivityLbx_Loaded"/>
         <Button x:Name="btnAdd" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="372,145,0,0" VerticalAlignment="Top" Width="75" Click="BtnAdd_Click"/>
         <Button x:Name="btnRemove" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="372,195,0,0" VerticalAlignment="Top" Width="75" Click="BtnRemove_Click"/>
         <ListBox x:Name="lbxCart" HorizontalAlignment="Left" Height="210" Margin="514,94,0,0" VerticalAlignment="Top" Width="209"/>
+        <RadioButton x:Name="rbAll" Content="All" HorizontalAlignment="Left" Margin="20,118,0,0" VerticalAlignment="Top" Checked="rbAll_Checked"/>
+        <RadioButton x:Name="rbLand" Content="Land" HorizontalAlignment="Left" Margin="20,153,0,0" VerticalAlignment="Top" Checked="rbAll_Checked"/>
+        <RadioButton x:Name="rbWater" Content="Water" HorizontalAlignment="Left" Margin="20,183,0,0" VerticalAlignment="Top" Checked="rbAll_Checked"/>
+        <RadioButton x:Name="rbAir" Content="Air" HorizontalAlignment="Left" Margin="20,215,0,0" VerticalAlignment="Top" Checked="rbAll_Checked"/>
 
     </Grid>
 </Window>

@@ -22,8 +22,9 @@ namespace CA2
         public string Description { get; set; }
 
         public ActivityType TypeOfActivity { get; set; }
+        public object SuitableFor { get; internal set; }
 
-        
+
         //CONSTRUCTORS
         public Activity(string Name, decimal Cost, string Description, DateTime activityDate, ActivityType ack)
         {
