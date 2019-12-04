@@ -113,16 +113,39 @@ namespace CA2
                 //show air activities
                 foreach(Activity activity in allActivities)
                 {
-                    if (activity.SuitableFor == Activity.Air)
+                    if (activity.TypeOfActivity == ActivityType.Air)
+                    {
+                        filteredActivities.Add(activity);
+                        activityLbx.ItemsSource = null;
+                        activityLbx.ItemsSource = filteredActivities;
+                    }
                 }
             }
             else if(rbLand.IsChecked == true)
             {
                 //show land activites
+                foreach (Activity activity in allActivities)
+                {
+                    if (activity.TypeOfActivity == ActivityType.Land)
+                    {
+                        filteredActivities.Add(activity);
+                        activityLbx.ItemsSource = null;
+                        activityLbx.ItemsSource = filteredActivities;
+                    }
+                }
             }
             else if(rbWater.IsChecked == true)
             {
                 //show water activities 
+                foreach (Activity activity in allActivities)
+                {
+                    if (activity.TypeOfActivity == ActivityType.Water)
+                    {
+                        filteredActivities.Add(activity);
+                        activityLbx.ItemsSource = null;
+                        activityLbx.ItemsSource = filteredActivities;
+                    }
+                }
             }
         }
     }
