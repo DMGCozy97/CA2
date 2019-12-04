@@ -17,22 +17,38 @@ namespace CA2
 
         public DateTime ActivityDate { get; set; }
 
-        public decimal Cost { get; set; }
+        //public decimal Cost { get; set; }
+        private decimal _cost;
+
+        public decimal Cost
+        {
+            get { return _cost; }
+            set
+            {
+                TotalCost += value; ;
+                _cost = value;
+            }
+        }
+
 
         public string Description { get; set; }
 
         public ActivityType TypeOfActivity { get; set; }
         public object SuitableFor { get; internal set; }
 
+        public static decimal TotalCost;
+
 
         //CONSTRUCTORS
-        public Activity(string Name, decimal Cost, string Description, DateTime activityDate, ActivityType ack)
+        public Activity(string name, decimal cost, string description, DateTime activityDate, ActivityType ack)
         {
-            this.Name = Name;
-            this.Cost = Cost;
-            this.Description = Description;
+            this.Name = name;
+            this.Cost = cost;
+            this.Description = description;
             this.ActivityDate = activityDate;
             this.TypeOfActivity = ack;
+
+            
         }
 
 

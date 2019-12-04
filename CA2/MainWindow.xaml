@@ -15,6 +15,8 @@
         <RadioButton x:Name="rbLand" Content="Land" HorizontalAlignment="Left" Margin="20,153,0,0" VerticalAlignment="Top" Checked="rbAll_Checked"/>
         <RadioButton x:Name="rbWater" Content="Water" HorizontalAlignment="Left" Margin="20,183,0,0" VerticalAlignment="Top" Checked="rbAll_Checked"/>
         <RadioButton x:Name="rbAir" Content="Air" HorizontalAlignment="Left" Margin="20,215,0,0" VerticalAlignment="Top" Checked="rbAll_Checked"/>
+        <TextBlock x:Name="tblkTotal" HorizontalAlignment="Left" Margin="647,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ttotl" HorizontalAlignment="Left" Margin="565,49,0,0" TextWrapping="Wrap" Text="Total Cost" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

@@ -24,6 +24,8 @@ namespace CA2
         List<Activity> selectedActivities = new List<Activity>();
         List<Activity> filteredActivities = new List<Activity>();
 
+        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -55,7 +57,7 @@ namespace CA2
             allActivities.Add(ninthact);
 
             activityLbx.ItemsSource = allActivities;
-
+            tblkTotal.Text = Activity.TotalCost.ToString();
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
@@ -68,6 +70,7 @@ namespace CA2
                 allActivities.Remove(selectedActivity);
                 selectedActivities.Add(selectedActivity);
 
+                tblkTotal.Text = Activity.TotalCost.ToString();
                 //refresh screeen
                 RefreshScreen();
             }
